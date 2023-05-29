@@ -53,6 +53,24 @@ fun main(args: Array<String>) {
     calcularSueldo(10.0, bonoEspecial = 30.0)
     calcularSueldo(sueldo=10.0, tasa = 45.0, bonoEspecial = 18.0 )
 
+    val sumaUno = Suma(1,1)
+    val sumaDos = Suma(null, 1)
+    val sumaTres = Suma(1,null)
+    val sumaCuatro = Suma(null,null)
+    sumaUno.sumar()
+    sumaDos.sumar()
+    sumaTres.sumar()
+    sumaCuatro.sumar()
+    println(Suma.pi)
+    println(Suma.elevarAlCuadrado(2))
+    println(Suma.historialSumas)
+
+    //ARREGLOS
+    //Tipo de arreglos
+    //Arreglo estatico
+
+
+
 }
 
 fun imprimirNombre(nombre:String): Unit{
@@ -97,5 +115,56 @@ abstract class numeros(//constructor primario
         numeroUno; numeroDos;
         println("Inicializando")
 
+    }
+}
+
+class Suma(//Constructor Primario Suma
+    uno: Int, //Parametro
+    dos: Int //Parametro
+): numeros(uno, dos) { // <- Cosntructor padre
+    init { //Bloque constructor primario
+        this.numeroUno; numeroUno;
+        this.numeroDos; numeroDos;
+    }
+    constructor( // Segundo constructor
+        uno: Int?, //parametros
+        dos: Int //parametros
+    ): this(//llamada constructor primario
+        if(uno==null) 0 else uno,
+        dos
+    ){//si necesitamos bloque de codigo lo usamos
+        numeroUno
+    }
+    constructor(//tercer constructor
+        uno:Int,
+        dos: Int?
+    ): this(
+        uno,
+        if (dos==null) 0 else dos
+    )// si no necesitamos el bloque de codigo "{}" lo omitios
+
+    constructor( //cuarto constructor
+        uno: Int?,
+        dos: Int?
+     ): this(
+        if ( uno == null ) 0 else uno,
+        if ( dos == null ) 0 else dos
+     )
+    public fun sumar(): Int{
+        val total = numeroUno+numeroDos
+        agregarHistorial(total)
+        return total
+    }
+
+    companion object{//atributos y metodos compartidos
+        //entre las instancias
+        val pi = 3.14
+        fun elevarAlCuadrado(num:Int):Int{
+            return num * num
+        }
+        val historialSumas = arrayListOf<Int>()
+        fun agregarHistorial(valorNuevaSuma: Int){
+            historialSumas.add(valorNuevaSuma)
+        }
     }
 }
