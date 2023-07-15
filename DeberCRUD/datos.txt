@@ -1,0 +1,2 @@
+Aucas,4,true,1548792.4,Wed Dec 12 00:00:00 COT 1956
+Liga Pro,Ecuador,true,2500000.5,Fri May 12 00:00:00 COT 2023,Aucas
