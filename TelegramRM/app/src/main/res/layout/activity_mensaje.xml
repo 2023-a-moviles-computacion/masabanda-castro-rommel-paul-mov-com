@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/ColorPrimario"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp">
+
+
+        <ImageView
+            android:id="@+id/iv_flecha"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/flecha" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/iv_flecha"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:id="@+id/ivFotoPerfilMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/perfil_m1"
+                tools:srcCompat="@drawable/perfil_m1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/iv_telefono"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="18dp"
+            android:layout_toStartOf="@+id/iv_puntos"
+            android:src="@drawable/llamar" />
+
+        <ImageView
+            android:id="@+id/iv_puntos"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/puntos" />
+
+
+        <TextView
+            android:id="@+id/tv_nombreContactoMensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/iv_telefono"
+            android:layout_toEndOf="@+id/cardView"
+            android:text="Rommel Masabanda"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <!--android:layout_width="95dp"
+            android:layout_height="27dp"-->
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMensajes"
+        android:layout_width="413dp"
+        android:layout_height="702dp"
+        android:background="@drawable/fondotelegram"
+        app:layout_constraintBottom_toTopOf="@+id/barinferior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:id="@+id/barinferior"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="2dp">
+
+
+        <ImageView
+            android:id="@+id/emojie"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/emojie" />
+
+
+        <ImageView
+            android:id="@+id/archivo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="23dp"
+            android:layout_toStartOf="@+id/voz"
+            android:src="@drawable/clip" />
+
+
+        <TextView
+            android:id="@+id/mensaje"
+            android:layout_width="261dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toStartOf="@+id/archivo"
+            android:layout_toEndOf="@+id/emojie"
+            android:text="Mensaje"
+            android:textColor="#888888"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/voz"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="17dp"
+            android:src="@drawable/microfono" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

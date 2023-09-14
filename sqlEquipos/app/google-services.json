@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1044174844104",
+    "project_id": "exameniibmasabanda",
+    "storage_bucket": "exameniibmasabanda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044174844104:android:901cc159cb3a39767175fd",
+        "android_client_info": {
+          "package_name": "com.example.exameniib_masabanda"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwMJbCOIiCUycyIt8HgracXVbZZvxBJo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044174844104:android:b803c1b4b37345d57175fd",
+        "android_client_info": {
+          "package_name": "com.example.examenrommel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwMJbCOIiCUycyIt8HgracXVbZZvxBJo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

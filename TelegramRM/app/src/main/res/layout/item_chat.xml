@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageView
+        android:id="@+id/ivFotoPerfil"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_margin="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivFotoPerfil"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Nombre de Usuario" />
+
+    <TextView
+        android:id="@+id/tvMensaje"
+        android:layout_width="275dp"
+        android:layout_height="20dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toEndOf="@+id/ivFotoPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+        tools:text="Este es un mensaje de ejemplo" />
+
+    <TextView
+        android:id="@+id/tvHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="13:20"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvNombre"
+        />
+
+    <TextView
+        android:id="@+id/tvNumMensajes"
+        android:layout_width="29dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/por_ver"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMensaje"
+        app:layout_constraintEnd_toEndOf="@+id/tvHora"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvMensaje"
+        app:layout_constraintTop_toTopOf="@+id/tvMensaje"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="3" />
+
+    <ImageView
+        android:id="@+id/tvVisto"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="5dp"
+
+        android:drawableStart="@drawable/visto"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHora"
+        app:layout_constraintEnd_toStartOf="@+id/tvHora"
+        app:layout_constraintTop_toTopOf="@+id/tvHora"
+        app:tint="@color/ColorSecundario"
+        tools:background="@color/black" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
