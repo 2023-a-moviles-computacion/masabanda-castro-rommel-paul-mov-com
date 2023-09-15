@@ -42,6 +42,7 @@
         app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toEndOf="@+id/ivFotoPerfil"
         app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+        android:textColor="#666666"
         tools:text="Este es un mensaje de ejemplo" />
 
     <TextView
